@@ -1,0 +1,268 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pickit| Fast Food Restaurant</title>
+    <link rel="icon" href="Icon.png" type="image/x-icon"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+    <style>
+        /*CSS Style*/
+        body{
+            font-family: "Baloo Bhai 2", cursive;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        header{
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            
+        }
+      
+        .btn{
+            margin-top: 30px;
+            color: white;
+            cursor: pointer;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+        }
+
+       
+        .food-menu{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap:30px;
+            padding: 20px;
+        }
+        .food-item{
+            border: 1px solid #ddd;
+            padding: 20px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border-radius: 15px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        .food-item:hover{
+            background-color: #f9f9f9;
+        }
+        .heading{
+            background-color:rgb(245, 242, 242) ;
+            color: #373333;
+            margin-bottom: 30px;
+            padding: 60px 0 30px 0;
+            grid-column: 1/-1;
+            text-align: center;
+        }
+        .heading > h3 {
+            font-weight: 600;
+            font-size: 22px;
+            letter-spacing: 5px;
+        }
+        .order-button{
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            margin: 20px 45px;
+            border: none;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .order-button:hover{
+            background-color: #444;
+        }
+        .devname{
+            font-family: Arial, sans-serif;
+            color: #fff;
+            font-size: 30px;
+        }
+        
+
+    </style>
+</head>
+<body>
+   <header>
+    
+    <link rel="preconnect" href="https://fonts.googleagpis.com">
+    <nav id="navabar">
+        <div class="Cname"><span>Pickit</span></div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <!--<li><a href="#about">About</a></li> -->
+            <li><a href="#order">Order </a></li>
+        </ul>
+    </nav>
+   
+    <div id="mobile">
+        <div class="logo1"><span>Pickit</span></div>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+           <!--<li><a href="#about">About</a></li>--> 
+            <li><a href="#order">Order</a></li>
+        </ul>
+    </div>
+    
+    <div class="overlay">
+        <section id="home">
+            <h1 class="h-primary">Welcome to <span style="color: crimson;">Pickit.</span></h1>
+            <br>
+            <p>Get Delicious Fast Foods from Pickit, Care for our Menu <span style="color: orange;"><i class="fa-solid fa-face-smile-wink fa-bounce"></i></span> <span style="color: crimson;">??</span></p>
+            
+        </section>
+    </div>
+   </header>
+
+
+   <div id="menu">
+    <div class="heading">
+        <h1>Our Menu List</h1>
+        <h3>Today's Special</h3>
+    </div>
+    <div class="food-menu">
+        <div class="food-item" onclick="orderFood('Pizza')">
+            <img src="Pizza.png" alt="" width="100%" height="auto">
+            <h3>Pizza</h3>
+            <p>Delicious pizza with your choice of toppings</p>
+            <p>$10</p>
+        </div>
+        <div class="food-item" onclick="orderFood('Burger')">
+            <img src="Burger.png" alt="" width="100%" height="auto">
+            <h3>Burger</h3>
+            <p>Classic Burger with Veggies and juicy patty and fresh ingredients</p>
+            <p>$8</p>
+        </div>
+        <div class="food-item" onclick="orderFood('Pasta')">
+            <img src="Pasta.png" alt="" width="100%" height="auto">
+            <h3>Pasta</h3>
+            <p>Italian pasta with rich tomato sauce and grated cheese</p>
+            <p>$12</p>
+        </div>
+        <div class="food-item" onclick="orderFood('Sharwama')">
+            <img src="Sharwama.png" alt="" width="100%" height="auto">
+            <h3>Sharwama</h3>
+            <p>Thinly sliced cuts of meat rolled into a large piece of flatbread or pita that has been steamed.</p>
+            <p>$12</p>
+        </div>
+    </div>
+    <div class="food-menu">
+        <div class="food-item" onclick="orderFood('Spicy fried Chicken platter')">
+            <img src="Spicy Ckicken.png" alt="" width="100%" height="auto">
+            <h3>Spicy fried Chicken platter</h3>
+            <p>Delicious and Hot Chicken.</p>
+            <p>$7</p>
+        </div>
+        <div class="food-item" onclick="orderFood('Deep fried Chicken')">
+            <img src="Deep fried Chicken.png" alt="" width="100%" height="auto">
+            <h3> Deep fried Chicken</h3>
+            <p> Crispy Fried Chicken Thigh and Wings </p>
+            <p>$13</p>
+        </div>
+        <div class="food-item" onclick="orderFood('Onion Rings')">
+            <img src="Onion Rings.png" alt="" width="100%" height="auto">
+            <h3>Onion Rings</h3>
+            <p> Crispy onion rings with Ranch sauce</p>
+            <p>$5</p>
+        </div>
+        <div class="food-item" onclick="orderFood('Chicken and Chips')">
+            <img src="Chicken and Chips.png" alt="" width="100%" height="auto">
+            <h3>Chicken and Chips</h3>
+            <p>Crispy Fried Chicken with French fries.</p>
+            <p>$10</p>
+        </div>
+    </div>
+
+    <div class="food-menu">
+        <div class="food-item" onclick="orderFood('Crispy Fried Fish')">
+            <img src="Crispy Fried Fish.png" alt="" width="100%" height="auto">
+            <h3>Crispy Fried Fish</h3>
+            <p> Flakky and Crunchy fish.</p>
+            <p>$10</p>
+        </div>
+        <div class="food-item" onclick="orderFood('Fried Rice and Chicken')">
+            <img src="Fried Rice and Chicken.png" alt="" width="100%" height="auto">
+            <h3>Fried Rice and Chicken</h3>
+            <p>Taste the Classic Fried Rice with Chicken</p>
+            <p>$8</p>
+        </div>
+        <div class="food-item" onclick="orderFood('Noodles')">
+            <img src="Noodles.png" alt="" width="100%" height="auto">
+            <h3>Noodles</h3>
+            <p>Simple and Delicous Noodles.</p>
+            <p>$5</p>
+        </div>
+        <div class="food-item" onclick="orderFood('Spicy Buffalo wings')">
+            <img src="Spicy Buffalo wings.png" alt="" width="100%" height="auto">
+            <h3>Spicy Buffalo wings</h3>
+            <p>Hot Chicken wings with Buffalo Sauce</p>
+            <p>$12</p>
+        </div>
+    </div>
+    
+   </div>
+   <div id="order">
+    <h1 class="title1">Order</h1>
+    <form action="">
+        <input type="text" class="inp_box" placeholder="Name" required>
+        <input type="email" class="inp_box" placeholder="Email" id="validate_email" required >
+        <textarea type="text" class="inp_box text_area" placeholder="Address"></textarea>
+        <button class="order-button" onclick="placeOrder()">Place Order</button>
+    </form>
+    
+   </div>
+
+<link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+
+<!-- Background & animion & navbar & title -->
+  <div class="container-fluid">
+<!-- Background animtion-->
+    <div class="background">
+       <div class="cube"></div>
+       <div class="cube"></div>
+       <div class="cube"></div>
+       <div class="cube"></div>
+      <div class="cube"></div>
+      
+      <p class="devname">Developed By <br> Habib Abdulkareem.</p>
+      <p class="Icons" >
+        <a href="https://web.facebook.com/profile.php?id=100075700733726"><i class="fa-brands fa-facebook icon"></i></a>
+        <a href="https://github.com/Habi12345"><i class="fa-brands fa-github icon"></i></a>
+        <a href="https://www.linkedin.com/in/habib-adavize-92b08526b/"><i class="fa-brands fa-linkedin icon"></i></a>
+      </p>
+      <p>&copy;copyright 2023</p>
+    </div>
+        </div>
+   <script>
+    //JavaScript Function to order food
+    let orderedItems = [];
+
+    const orderFood = (foodItem) => {
+        orderedItems.push(foodItem);
+        alert(foodItem + ' added to cart')
+    }
+    const placeOrder = () => {
+        if(orderedItems.length > 0){
+            let items = orderedItems.join(', ');
+            alert('order placed with the following items:\n' + items);
+                orderedItems = [];
+        }else{
+            alert('Please select at least one item to order');
+        }
+    }
+    // JavaScript Function to get day
+    //JavaScript Fucntion to Validate Email
+    /*let validate_email = document.getElementById('validate_email')
+    function validate_email(feild, alerttxt){
+        with (feild){
+            apos = value.indexOf("@")
+            dotPos = value.lastIndexOf(".")
+            if (apos < 1 || dotpos - apos < 2){ alert(alerttxt); return false; }
+            else{ return true;}
+        }
+    }*/
+   </script>
+</body> 
+</html>
