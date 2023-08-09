@@ -4,7 +4,7 @@ header {
   background-position: center;
   background-size: cover;
   height: 100vh;
-  
+  width: 100%;
 }
 nav{
   list-style-type: none;
@@ -94,7 +94,7 @@ nav a {
   text-decoration: none;
   color: white;
 }
-@media screen and ( max-width: 768px){
+@media screen and (min-width: 375px) and (max-width: 812px){
 
   #mobile{
     display: flex;
@@ -147,19 +147,8 @@ nav a {
       url(https://images.unsplash.com/photo-1589302168068-964664d93dc0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1887&q=80);
     background-position: center;
     background-size: cover;
-    width: 82vh;
+
     height: 180vh;
-  }
-  #menu{
-    width: 88vh;
-    margin: 0;
-    padding: 0;
-  }
-  #order{
-    width: 88vh;
-  }
-  .background{
-    width: 88vh;
   }
 }
 #order{
